@@ -16,96 +16,16 @@
 <script>
 export default {
   name: 'HomeIcons',
+  props: {
+    list: Array
+  },
   data () {
-    return {
-      iconList: [
-        {
-          id: '0000',
-          imgUrl: require('@/assets/images/index_icon_0.png'),
-          desc: '景点门票0'
-        },
-        {
-          id: '0001',
-          imgUrl: require('@/assets/images/index_icon_1.png'),
-          desc: '景点门票1'
-        },
-        {
-          id: '0002',
-          imgUrl: require('@/assets/images/index_icon_2.png'),
-          desc: '景点门票2'
-        },
-        {
-          id: '0003',
-          imgUrl: require('@/assets/images/index_icon_3.png'),
-          desc: '景点门票3'
-        },
-        {
-          id: '0004',
-          imgUrl: require('@/assets/images/index_icon_4.png'),
-          desc: '景点门票4'
-        },
-        {
-          id: '0005',
-          imgUrl: require('@/assets/images/index_icon_5.png'),
-          desc: '景点门票5'
-        },
-        {
-          id: '0006',
-          imgUrl: require('@/assets/images/index_icon_6.png'),
-          desc: '景点门票6'
-        },
-        {
-          id: '0007',
-          imgUrl: require('@/assets/images/index_icon_7.png'),
-          desc: '景点门票7'
-        },
-        {
-          id: '0008',
-          imgUrl: require('@/assets/images/index_icon_0.png'),
-          desc: '景点门票8'
-        },
-        {
-          id: '0009',
-          imgUrl: require('@/assets/images/index_icon_1.png'),
-          desc: '景点门票9'
-        },
-        {
-          id: '0010',
-          imgUrl: require('@/assets/images/index_icon_0.png'),
-          desc: '景点门票10'
-        },
-        {
-          id: '0011',
-          imgUrl: require('@/assets/images/index_icon_1.png'),
-          desc: '景点门票11'
-        },
-        {
-          id: '0012',
-          imgUrl: require('@/assets/images/index_icon_2.png'),
-          desc: '景点门票12'
-        },
-        {
-          id: '0013',
-          imgUrl: require('@/assets/images/index_icon_3.png'),
-          desc: '景点门票13'
-        },
-        {
-          id: '0014',
-          imgUrl: require('@/assets/images/index_icon_4.png'),
-          desc: '景点门票14'
-        },
-        {
-          id: '0015',
-          imgUrl: require('@/assets/images/index_icon_5.png'),
-          desc: '景点门票15'
-        }
-      ]
-    }
+    return {}
   },
   computed: {
     pages () {
       const pages = []
-      this.iconList.forEach((item, index) => {
+      this.list.forEach((item, index) => {
         const page = Math.floor(index / 8)
         if (!pages[page]) {
           pages[page] = []
