@@ -1,6 +1,6 @@
 <template>
   <div class="icons">
-    <swiper>
+    <swiper :options="swiperOption">
       <swiper-slide v-for="(page,index) of pages" :key="index">
         <div class="icon" v-for="item of page" :key="item.id">
           <div class="icon-img">
@@ -20,7 +20,11 @@ export default {
     list: Array
   },
   data () {
-    return {}
+    return {
+      swiperOption: {
+        autoPlay: false
+      }
+    }
   },
   computed: {
     pages () {
@@ -48,6 +52,7 @@ export default {
 
   .icons
     margin-top .1rem
+
     .icon
       position relative
       width 25%
@@ -55,6 +60,7 @@ export default {
       float left
       padding-bottom 25%
       overflow hidden
+
     .icon-img
       position: absolute
       top 0

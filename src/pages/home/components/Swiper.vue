@@ -23,7 +23,8 @@ export default {
         pagination: {
           el: '.swiper-pagination'
         },
-        loop: true
+        loop: true,
+        autoPlay: true
       },
       swiperList: [
 
